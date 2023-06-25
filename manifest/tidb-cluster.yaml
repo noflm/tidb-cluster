@@ -50,5 +50,5 @@ spec:
     maxFailoverCount: 0
     replicas: 3
     service:
-      type: ClusterIP
+      type: LoadBalancer
     config: {}
