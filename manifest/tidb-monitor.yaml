@@ -9,9 +9,13 @@ spec:
   prometheus:
     baseImage: prom/prometheus
     version: v2.27.1
+    service:
+      type: LoadBalancer
   grafana:
     baseImage: grafana/grafana
     version: 7.5.11
+    service:
+      type: LoadBalancer
   initializer:
     baseImage: pingcap/tidb-monitor-initializer
     version: v6.5.0
