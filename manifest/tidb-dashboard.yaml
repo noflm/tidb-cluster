@@ -5,6 +5,8 @@ metadata:
 spec:
   baseImage: pingcap/tidb-dashboard
   version: latest
+  service:
+      type: LoadBalancer
 
   ## tidb cluster to be monitored
   ## ** now only support monitoring one tidb cluster **
