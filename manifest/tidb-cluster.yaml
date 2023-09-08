@@ -21,7 +21,7 @@ spec:
     # if storageClassName is not set, the default Storage Class of the Kubernetes cluster will be used
     storageClassName: directpv-min-io
     requests:
-      storage: "5Gi"
+      storage: "10Gi"
     config: {}
   tikv:
     baseImage: pingcap/tikv
@@ -34,7 +34,7 @@ spec:
     # if storageClassName is not set, the default Storage Class of the Kubernetes cluster will be used
     storageClassName: directpv-min-io
     requests:
-      storage: "5Gi"
+      storage: "20Gi"
     config:
       storage:
         # In basic examples, we set this to avoid using too much storage.
@@ -42,9 +42,9 @@ spec:
       rocksdb:
         # In basic examples, we set this to avoid the following error in some Kubernetes clusters:
         # "the maximum number of open file descriptors is too small, got 1024, expect greater or equal to 82920"
-        max-open-files: 256
+        max-open-files: 512
       raftdb:
-        max-open-files: 256
+        max-open-files: 512
   tidb:
     baseImage: pingcap/tidb
     maxFailoverCount: 0
